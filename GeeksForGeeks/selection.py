@@ -1,8 +1,8 @@
 #User function Template for python3
 
 class Solution: 
-
-    def selectionSort(self, arr,n):
+   def selectionSort(self, arr,n):
+        #code here
         for i in range(len(arr)):
             minI = i
             for j in range(i+1, len(arr)):
@@ -20,4 +20,4 @@ if __name__ == '__main__':
         for i in range(n):
             print(arr[i],end=" ")
         print()
-# } Driver Code Ends
+        
