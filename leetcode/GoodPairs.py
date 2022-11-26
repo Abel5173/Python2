@@ -1,7 +1,9 @@
-l = [int(i) for i in input().split()]
-cnt = 0
-for i in range(len(l)):
-    for j in range(i+1, len(l)):
-        if l[i] == l[j]:
-            cnt += 1
-print(cnt)
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
+        cnt = 0
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if nums[i] == nums[j]:
+                    cnt += 1
+            
+        return cnt
