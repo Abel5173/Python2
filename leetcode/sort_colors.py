@@ -1,9 +1,12 @@
-l = [int(i) for i in input().split()]
-x = []
-for i in range(len(l)):
-    min_idx = i
-    for j in range(i+1,len(l)):
-        if l[min_idx] > l[j]:
-            min_idx = j
-    l[i], l[min_idx] = l[min_idx], l[i]
-print(l)
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        for i in range(len(nums)):
+            min_idx = i
+            for j in range(i+1,len(nums)):
+                if nums[min_idx] > nums[j]:
+                    min_idx = j
+            nums[i], nums[min_idx] = nums[min_idx], nums[i]
+        return nums
