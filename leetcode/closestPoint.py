@@ -1,5 +1,5 @@
 import heapq
-import math
+
 class Solution(object):
     def kClosest(self, points, k):
         minHeap = []
