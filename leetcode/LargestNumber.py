@@ -1,5 +1,7 @@
 nums = [int(i) for i in input().split()]
 
+if all(p == 0 for p in nums):
+    print('0')
 for i in range(len(nums)):
     for j in range(i+1, len(nums)):
         a = int(''.join([str(nums[i]), str(nums[j])]))
