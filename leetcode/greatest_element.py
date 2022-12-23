@@ -1,5 +1,7 @@
 #Next Greater Element I
 # Solved using hashmap
+
+
 class Solution(object):
     def nextGreaterElement(self, findNums, nums):
         """
