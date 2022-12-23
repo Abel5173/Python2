@@ -1,18 +1,18 @@
 #Next Greater Element I
 # Solved using hashmap
 
-class Solution(object):
-    def nextGreaterElement(self, findNums, nums):
-        """
-        :type findNums: List[int]
-        :type nums: List[int]
-        :rtype: List[int]
-        """
-        stk, lookup = [], {}
-        for num in nums:
-            while stk and num > stk[-1]:
-                lookup[stk.pop()] = num
-            stk.append(num)
-        while stk:
-            lookup[stk.pop()] = -1
-        return map(lambda x : lookup[x], findNums)
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        l = []
+        for i in range(len(nums1)):
+            b = True
+            x = nums2.index(nums1[i])
+            for j in range(x,len(nums2)):
+                if nums1[i] < nums2[j]:
+                    nums1[i] = nums2[j]
+                    b = False
+                    break
+            if b:
+                nums1[i] =-1
+        
+        return nums1
